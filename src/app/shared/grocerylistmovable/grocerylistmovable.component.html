@@ -1,0 +1,20 @@
+<div class="body" id="{{list.id}}" #body holding="false" mousePos="0, 0" ChX="600" ChY="30" (mousedown)="DragEnter($event)" (mouseup)="DragExit()" (mouseleave)="MouseLeave()" (mousemove)="MouseMove($event)">
+    <div class="line" #line [ngStyle]="{'height.px' : body.scrollHeight}"></div>
+    <div class="Header">
+        <span #HeaderName>
+            {{list.name}}
+        </span>
+    </div>
+    <div class="Category">
+        <app-category class="CNumber" #id [text]="'Id'" (pressedEvent)="handlePressedEvent($event)"/>
+        <app-category class="CName" #name [text]="'Name'" (pressedEvent)="handlePressedEvent($event)"/>
+        <app-category class="CPrice" #price [text]="'Price'" (pressedEvent)="handlePressedEvent($event)"/>
+        <span class="CAmount">#</span>
+    </div>
+    <div class="Grocery" *ngFor="let grocery of list.groceryEntries" [style.background]="SetBackground(grocery.category)" (click)="Clicked($event)" (contextmenu)="RightClick($event)">
+        <span class="Number">{{grocery.id}} </span>
+        <span class="Name">{{grocery.name}}</span>
+        <span class="Price">{{grocery.price}}</span>
+        <span class="Amount">{{grocery.amount}}</span>
+    </div>
+</div>

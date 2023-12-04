@@ -1,0 +1,185 @@
+.Main{
+    background-image: linear-gradient(to bottom, #FF8F8F, #ffb5b5);
+    width: 100vw;
+    height: calc(100vh - 38px);
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.Button{
+    width: 400px;
+    height: 80px;
+    background-image: linear-gradient(to bottom, #a2db88, #8fe069);
+    border-radius: 50px;
+    border: 2px black solid;
+    font-size: 40px;
+    z-index: 10;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    width: 350px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #9ADE7B;
+    border: 2px #FF8F8F solid;
+    z-index: 12;
+    box-shadow: 25px 25px 45px 15px rgba(66, 68, 90, 1);
+}
+.popup > input {
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    border-bottom: 1px black solid;
+    width: 95%;
+}
+.popup > input:focus {
+    outline: none;
+}
+.blur{
+    animation: blur 2s 1 forwards;
+}
+@keyframes blur {
+    100% {filter: blur(4px);}
+}
+.blurBack{
+    animation: blurBack 2s 1 forwards;
+}
+@keyframes blurBack {
+    0% {filter: blur(4px);}
+    100% {filter: blur(0px);}
+}
+.slideInto{
+    animation: Slide 2s 1 forwards;
+}
+@keyframes Slide {
+    100% {left: 50%;}
+}
+.slideBack{
+    animation: SlideBack 2s 1 forwards;
+}
+@keyframes SlideBack {
+    0% {left: 50%;}
+    100% {left: 120%;}
+}
+.popupButton{
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: -26.5px;
+    width: 50px;
+    height: 50px;
+    background-image: url("https://ih1.redbubble.net/image.3277110949.6554/st,small,507x507-pad,600x600,f8f8f8.u1.jpg");
+    background-size: 135%;
+    background-position: center;
+}
+.Wrong{
+    animation: Wrong 0.65s 1 forwards;
+}
+@keyframes Wrong {
+    10% {left: 55%;}
+    30% {left: 45%;}
+    50% {left: 55%;}
+    70% {left: 45%;}
+    90% {left: 55%;}
+    100% {left: 50%;}
+}
+.Dropdown{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 420px;
+    height: 80px;
+    background-color: #9ADE7B;
+    border-radius: 50px;
+    border: 2px black solid;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+    user-select: none;
+    z-index: 13;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding-top: 8px;
+    align-content: flex-start;
+}
+.Open{
+    animation: Opening 1s 1 forwards;
+}
+@keyframes Opening {
+    100% { height: 800px; }
+}
+.Close{
+    animation: Closing 1s 1 forwards;
+}
+@keyframes Closing {
+    0% { height: 800px; }
+    100% { height: 80px; }
+}
+
+::-webkit-scrollbar-track
+{
+	border: 5px solid white;
+	background-color: #b2bec3;
+}
+
+::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #74b9ff;
+	border-radius: 10px;
+}
+.DeleteBtn{
+    right: 7px;
+    position: absolute;
+    margin:  -5px;
+    background-color: red;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 120%;
+    opacity: 0;
+    z-index: 100;
+    animation: invisible 0.2s 1 forwards;
+}
+.List:hover > .DeleteBtn {
+    animation: visible 0.2s 1 forwards;
+}
+@keyframes visible {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes invisible {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.NotLoged{
+    z-index: 100000;
+    background-image: linear-gradient(to bottom, #FF8F8F, #ffb5b5);
+    width: 100vw;
+    height: calc(100vh - 38px);
+    position: absolute;
+    top: 38px;
+    font-size: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,113 @@
+.FirstText, .SecondText{
+    font-size: 12vw;
+    color: #EEF296;
+    width: 100vw;
+    display: block;
+    opacity: 0;
+}
+.SecondText{
+    padding-top: 14vh;
+    text-align: center;
+    animation: SText 1s 0.5s 1 forwards;
+}
+.FirstText {
+    padding-left: 2vw;
+    padding-top: 22vh;
+    animation: FText 1s 1 forwards;
+}
+.LastText{
+    background-image: linear-gradient(to right, #F27121cc, #E94057cc, #8A2387cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: -140vh;
+    left: 67vw;
+    font-size: 12vw;
+    width: 30vw;
+    animation: LText 1s 1s 1 forwards;
+}
+@keyframes FText {
+    10%{opacity: 0;}
+    100%{opacity: 1; padding-top: 10vh;}
+}
+@keyframes SText {
+    10%{opacity: 0;}
+    100%{opacity: 1; padding-top: 2vh;}
+}
+@keyframes LText {
+    100%{top: 14vh;}
+}
+.UpperPart{
+    background-image: linear-gradient(to bottom, #FF8F8F, #ffb5b5);
+}
+.LeftImage {
+    width: 60vw;
+    position: absolute;
+    left: -45%;
+    top: 40%;
+    rotate: -50deg;
+    animation: rotateL 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+@keyframes rotateL {
+    to {rotate: 30deg; top: 10%; left: -40%;}
+}
+.RightImage {
+    height: 60vw;
+    position: absolute;
+    right: -20%;
+    top: 20%;
+    rotate: -15deg;
+    animation: rotateR 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+@keyframes rotateR {
+    to {rotate: -55deg; top: 10%;}
+}
+.BottomPart{
+    background-color: #9ADE7B;
+    padding-top: 6%;
+}
+.GroceryTextLeft, .GroceryTextRight{
+    color: #508D69;
+    -webkit-text-stroke: 1px black;
+    width: 32vw;
+    font-size: 3.5vw;
+    padding-bottom: 5vh;
+    text-align: center;
+}
+.GroceryTextLeft{
+    margin-left: 10vw;
+    float: left;
+}
+.GroceryTextRight{
+    margin-right: 10vw;
+    float: right;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.GroceryListLeft{
+    float: left;
+    padding-left: 10vw;
+}
+.GroceryListRight{
+    float: right;
+    padding-right: 10vw;
+}
+.Footer {
+    width: 100vw;
+    height: 3.5em;
+    background-image: linear-gradient(to right, #b2ef91, #fa9372);
+    text-align: center;
+    padding: 1em;
+}

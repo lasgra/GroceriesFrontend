@@ -1,0 +1,195 @@
+.Main{
+    background-image: linear-gradient(to bottom, #FF8F8F, #ffb5b5);
+    width: 100vw;
+    height: 96vh;
+    position: relative;
+}
+.body {
+    position: relative;
+    width: 40vw;
+    min-height: 620px;
+    border: 1px black solid;
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 32px 32px;
+    background-position: right top 3.2px;
+    background-image: repeating-linear-gradient(0deg, rgba(112,190,237,1), rgba(112,190,237,1) 3.2px, #ffffff 3.2px, #ffffff);
+}
+.line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(228, 97, 92);
+    top: 0;
+    left: 10%;
+}
+.Header{
+    height: 96px;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+}
+.Grocery{
+    height: 96px;
+    border: 1px black solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Grocery > span {
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Grocery:hover{
+    background-color: rgba(0, 0, 0, 0.253)
+}
+.Number{
+    width: 10%
+}
+.Name{
+    width: 55%;
+}
+.Input{
+    font-size: 32px;
+    height: 40%;
+    width: 45%;
+    margin-top: 4px;
+    background-color: rgba(0, 0, 0, 0.103);
+    border: 2px solid rgb(0, 0, 0)
+}
+.Login, .Register{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.Higher{
+    z-index: 2;
+}
+.Change{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 700;
+    color: #508D69;
+    height: 44px;
+    width: 100%;
+}
+.Old{
+    z-index: 5;
+    animation: OldAnim 3s 1 forwards;
+}
+.New{
+    animation: NewAnim 3s 1 forwards;
+}
+@keyframes OldAnim {
+    50%{ left: 35%;}
+    100%{ left: 50%;}
+}
+@keyframes NewAnim {
+    0%{z-index: 1;}
+    50%{ left: 80%; z-index: 6;}
+    100%{ left: 50%; z-index: 12;}
+}
+.ButtonLoad{
+    position: absolute;
+    width: 0px;
+    height: 20px;
+    background-color: #508D69;
+    border-radius: 10px;
+    border: 2px black solid;
+    z-index: 12;
+    top: 92.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.Button{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    background-color: #9ADE7B;
+    border-radius: 50px;
+    border: 2px black solid;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+    top: 92.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ButtonAnim{
+    animation: ButtonAnim 3s 1 forwards;
+}
+@keyframes ButtonAnim {
+    0% { filter: blur(0px);}
+    50% { filter: blur(30px);}
+    100% { filter: blur(0px);}
+}
+.ButtonSubmitAnim{
+    animation: ButtonSubmit 4s 1 forwards;
+}
+@keyframes ButtonSubmit {
+    6% { width: 600px; height: 4px; border-radius: 2px; }
+    20% { width: 600px; height: 20px; border-radius: 10px; }
+    100% { width: 600px; height: 20px; border-radius: 10px; }
+}
+.DissapearText{
+    animation: DissapearText 0.3s 1 forwards;
+}
+@keyframes DissapearText {
+    100% { font-size: 0px; }
+}
+.ButtonLoadingAnim  {
+    animation: ButtonLoad 3s 1 forwards;
+}
+@keyframes ButtonLoad {
+    0% { opacity: 1; }
+    99% { width: 600px; opacity: 1;}
+    100% { width: 600px; opacity: 0;}
+}
+
+.ButtonError{
+    animation: ButtonError 2s 1 forwards;
+}
+@keyframes ButtonError {
+    0% { width: 600px; height: 20px; border-radius: 10px; background-color: #508D69; }
+    30% { width: 100px; height: 100px; border-radius: 50%; background-color: red;}
+    100% { width: 100px; height: 100px; border-radius: 50%; background-color: red; }
+}
+.ButtonSucc{
+    animation: ButtonSucc 2s 1 forwards;
+}
+@keyframes ButtonSucc {
+    0% { width: 600px; height: 20px; border-radius: 10px; background-color: #508D69; }
+    30% { width: 100px; height: 100px; border-radius: 50%; }
+    100% { width: 100px; height: 100px; border-radius: 50%; }
+}
+.ButtonAnimRev{
+    animation: ButtonAnimRev 2s 1 forwards;
+}
+@keyframes ButtonAnimRev {
+    0% { width: 100px; height: 100px; border-radius: 50px;}
+    100% { width: 400px; height: 100px; border-radius: 50px;}
+}
+.ApearText{
+    animation: ApearText 2s 1 forwards;
+}
+@keyframes ApearText {
+    0% { font-size: 0px; }
+    100% { font-size: 35px; }
+}

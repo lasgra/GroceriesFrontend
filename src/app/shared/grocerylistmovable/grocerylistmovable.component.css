@@ -1,0 +1,116 @@
+.body {
+    position: absolute;
+    left: 600px;
+    top: 30px;
+    width: 32vw;
+    min-height: 512px;
+    max-height: 800px;
+    min-width: 450px;
+    border: 1px black solid;
+    background-color: #ffffff;
+    opacity: 1;
+    background-size: 32px 32px;
+    background-position: right top 3.2px;
+    background-image: repeating-linear-gradient(0deg, rgba(112,190,237,1), rgba(112,190,237,1) 3.2px, #ffffff 3.2px, #ffffff);
+    overflow-y: auto;
+    background-attachment: local;
+    overflow-x: hidden;
+    user-select: none;
+}
+.line {
+    position: absolute;
+    width: 2px;
+    background-color: rgb(228, 97, 92);
+    top: 0;
+    left: 10%;
+}
+.Header{
+    height: 96px;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+}
+.Grocery{
+    height: 96px;
+    border: 1px black solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Grocery > span {
+    height: 100%;
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Grocery:hover{
+    background-color: rgba(0, 0, 0, 0.253)
+}
+.Number{
+    width: 10%
+}
+.Name{
+    width: 55%;
+}
+.Price{
+    width: 20%;
+}
+.Amount{
+    width: 15%;
+}
+
+.Category{
+    height: 32px;
+    width: 100%;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Category > span, .Category > app-category {
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CNumber{
+    width: 12%
+}
+.CName{
+    width: 53%;
+}
+.CPrice{
+    width: 20%;
+}
+.CAmount{
+    width: 15%;
+}
+::-webkit-scrollbar-track
+{
+	border: 5px solid white;
+	background-color: #b2bec3;
+}
+
+::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #dfe6e9;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #74b9ff;
+	border-radius: 10px;
+}
+.Delete{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}

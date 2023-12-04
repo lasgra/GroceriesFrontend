@@ -1,0 +1,22 @@
+<div class="Main" #Main>
+    <div class="Dropdown" #Drop (click)="Dropdown()">
+        <span #DropdownText>List actions \/ </span>
+        <div class="Button" style="display: none;" #AddButton (click)="AddList()">
+            <span>Add your grocery list</span>
+        </div>
+        <span #ListsText style="display: none;">Your lists:</span>
+        <div class="Button List" *ngFor="let list of lists" (click)="ShowList($event)">
+            <div id="Button" class="DeleteBtn" (click)="DeleteList($event)">X</div>
+            <span id="{{list.id}}">{{list.name}}</span>
+        </div>
+    </div>
+    <app-grocerylistmovable *ngFor="let list of Groceries" [list]="list"></app-grocerylistmovable>
+</div>
+<div class="popup" #Popup>
+    <span>Add grocery list name</span>
+    <input #Input type="text"  maxlength="15"  placeholder="Text here">
+    <div #popupButton class="popupButton" (click)="Clicked()"></div>
+</div>
+<div #NotLogged style="display: none;">
+    <span>You must be logged in</span>
+</div>

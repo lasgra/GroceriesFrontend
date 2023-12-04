@@ -1,0 +1,14 @@
+.bar{
+    background-image: linear-gradient(to right, #9ADE7B, #fa9372);
+    color: #EEF296;
+    height: 38px;
+}
+.place, .fplace{
+    cursor: pointer;
+    /* width: 25vw; */
+}
+.special{
+    background-image: linear-gradient(to right, #F27121cc, #E94057cc, #8A2387cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

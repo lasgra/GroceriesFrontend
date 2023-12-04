@@ -1,0 +1,64 @@
+<div class="Main">
+    <div id="Login" class="Login">
+        <div class="body">
+            <div class="line"></div>
+            <div class="Header">
+                <span>Login</span>
+            </div>
+            <div class="Grocery">
+                <span class="Number">1</span>
+                <span class="Name">E-mail</span>
+                <input type="text" class="Input" id="LEmail">
+            </div>
+            <div class="Grocery">
+                <span class="Number">2</span>
+                <span class="Name">Password</span>
+                <input type="text" class="Input" id="LPassword">
+            </div>
+            <span class="Change" (click)="FlipPage('L')">
+                Want to create account?
+            </span>
+        </div>
+    </div>
+    <div id="Register" class="Register Higher">
+        <div class="body">
+            <div class="line"></div>
+            <div class="Header">
+                <span>Register</span>
+            </div>
+            <div class="Grocery">
+                <span class="Number">1</span>
+                <span class="Name">Username</span>
+                <input type="text" class="Input" id="RUsername">
+            </div>
+            <div class="Grocery">
+                <span class="Number">2</span>
+                <span class="Name">E-mail</span>
+                <input type="text" class="Input" id="REmail">
+            </div>
+            <div class="Grocery">
+                <span class="Number">3</span>
+                <span class="Name">Date Of Birth</span>
+                <input type="date" class="Input" id="RBirth">
+            </div>
+            <div class="Grocery" style="position: relative;">
+                <span class="Number">4</span>
+                <span class="Name">Password</span>
+                <span style="font-size: 20px; position: absolute; top: 30%; left: 11%;">Password must be over 8 characters</span>
+                <input type="password" class="Input" id="RPassword">
+            </div>
+            <div class="Grocery">
+                <span class="Number">5</span>
+                <span class="Name">Confirm Password</span>
+                <input type="password" class="Input" id="RCPassword">
+            </div>
+            <span class="Change" (click)="FlipPage('R')">
+                Already have an account?
+            </span>
+        </div>
+    </div>
+    <div class="Button" id="Button" (click)="ButtonPress()">
+        <span id="ButtonText">Create Account</span>
+    </div>
+    <div class="ButtonLoad" id="ButtonLoading" (click)="ButtonPress()"></div>
+</div>

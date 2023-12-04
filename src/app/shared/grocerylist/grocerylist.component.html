@@ -1,0 +1,20 @@
+<div class="body" id="body">
+    <div class="line" id="line"></div>
+    <div class="Header">
+        <span>
+            {{list.name}}
+        </span>
+    </div>
+    <div class="Category">
+        <span class="CNumber">ID</span>
+        <span class="CName">Grocery</span>
+        <span class="CPrice">Price</span>
+        <span class="CAmount">#</span>
+    </div>
+    <div class="Grocery" *ngFor="let grocery of list.groceryEntries">
+        <span class="Number">{{grocery.id}}</span>
+        <span class="Name">{{grocery.name}}</span>
+        <span class="Price">{{grocery.price}}</span>
+        <span class="Amount">{{grocery.amount}}</span>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="w-100" style="height: 200vh;">
+    <div class="UpperPart h-50">
+        <span class="FirstText">
+            Create Your
+        </span>
+        <span class="LastText">
+            OWN
+        </span>
+        <span class="SecondText">
+            Grocery List!
+        </span>
+        <img class="LeftImage" src="https://purepng.com/public/uploads/large/purepng.com-bananabananafruitside-vieworganic-481521306381lqons.png">
+        <img class="RightImage" src="https://www.freeiconspng.com/thumbs/water-bottle-png/water-bottle-png-8.png">
+    </div>
+    <div class="BottomPart h-50">
+        <span class="reveal GroceryTextLeft">
+            Account options
+        </span>
+        <span class="reveal GroceryTextRight"> 
+            Grocery list options
+        </span>
+        <div class="reveal GroceryListLeft" (click)="navigate('account')">
+            <app-grocerylist *ngFor="let list of AccountList" [list]="list"></app-grocerylist>
+        </div>
+        <div class="reveal GroceryListRight" (click)="navigate('lists')">
+            <app-grocerylist *ngFor="let list of GroceryLists" [list]="list"></app-grocerylist>
+        </div>
+    </div>
+    <div class="Footer">
+        Created by: Tomasz Ocłoń | 2023
+    </div>
+</div>
+
+
